@@ -5,10 +5,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { GenresComponent } from './genres/genres.component';
 import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes:Routes=[
   {path: 'home', component: HomeComponent},
   {path: 'genres', component: GenresComponent},
+  {path: 'aboutUs', component: AboutComponent},
+  {path: 'contact', component: ContactComponent}
+
   
   ];
 
@@ -16,7 +21,9 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     GenresComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

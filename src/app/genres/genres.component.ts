@@ -10,7 +10,7 @@ export class GenresComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    alert("hola?")
+    //alert("hola?")
 
   }
   
