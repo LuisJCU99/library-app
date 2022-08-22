@@ -1,1 +1,8 @@
-<h1>HI!</h1>
+<h2>Genres</h2>
+<ul class="genres">
+  <li *ngFor="let genre of genres$ | async" [class.selected]="genre.id === selectedId">
+    <a [routerLink]="['/genres', genre.id]">
+      <span class="badge">{{ genre.id }}</span>{{ genre.name }}
+    </a>
+  </li>
+</ul>
