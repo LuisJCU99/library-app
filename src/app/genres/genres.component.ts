@@ -48,7 +48,7 @@ export class GenresComponent implements OnInit {
   ngOnInit() {
     this.genres$ = this.route.paramMap.pipe(
       switchMap(params => {
-        //this.selectedId = parseInt(params.get('id')!, 10);
+        this.selectedId = parseInt(params.get('id')!, 10);
         return this.service.getGenres();
       })
     );
