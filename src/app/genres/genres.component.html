@@ -1,60 +1,53 @@
-<h2>Genres</h2>
-<ul class="genres">
-  <li *ngFor="let genre of genres$ | async" [class.selected]="genre.id === selectedId">
-    <a (click)="onPress()" [routerLink]="['/genres', genre.id]"> {{genre.id}}
-      <span class="badge">{{ genre.id }}</span>{{ genre.name }}
+<h1>Genres</h1>
+<div class="genres">
+  <div *ngFor="let genre of genres$ | async" [class.selected]="genre.id === selectedId">
+    <a (click)="onPress()" [routerLink]="['/genres', genre.id]">
+      <span class="badge">{{ genre.id }}</span> <h3>{{ genre.name }}</h3>
     </a>
-  <div *ngFor='let book of books'>
-
+  
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div *ngFor='let book of books'>
     <div *ngIf="genre.id == book.ID_genre">
       <div id="comp-render" *ngIf="display">
-        <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Branch</th>
-                <th>DOB</th>
-                <th>Gender</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr >
-                <td>{{book.ID_genre}}</td>
-                <td>{{book.Name}}</td>
-               <!--<td>{{book.Description}}</td> --> 
-                <img [src]="book.Description" >
-            </tr>
-        </tbody>
-      </table>
-      </div>
-    </div>
-  </div>
-  </li>
-</ul>
-<!--
-  <app-book></app-bok>
--->
-<div class="album py-5 bg-light">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-          <div class="card-body" style="overflow-y: scroll; height: 200px;">
-            <p class="card-text">This is a widewer  dscdscsdcdscsdcdscsdc  fewwwwwwwwrrrrrrrrttttttttyyyyyyyyyyyuuuuuuuuuhhhhhhhhhg      gggggggggfffffeeeeeeeeeeee     eeeeeeeeeeeeeeeeawddasdwadawdsawadwaddwasdadsaeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img [src]="book.Image" >
+                    <div class="card-body" style="overflow-y: scroll; height: 200px;">
+                      <p class="card-text"><b>{{book.Name}}</b>{{book.Description}}</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>   
+                </div>
               </div>
-              <small class="text-muted">9 mins</small>
             </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </div>
+</div>
+
+
+<!--
+  <app-book></app-bok>
+-->
+
+
+
+
+   
+   
+
+
+
+
+
+
+
