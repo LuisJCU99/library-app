@@ -9,14 +9,14 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { BookComponent } from './book/book.component';
 
-const appRoutes:Routes=[
-  {path: 'home', component: HomeComponent},
-  {path: 'genres', component: GenresComponent},
-  {path: 'aboutUs', component: AboutComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'genres/:id', component: GenresComponent},
+const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'genres', component: GenresComponent },
+  // {path: 'aboutUs', component: AboutComponent},
+  // {path: 'contact', component: ContactComponent},
+  { path: 'genres/:id', component: GenresComponent },
   { path: '**', redirectTo: '/home' },
-  ];
+];
 
 @NgModule({
   declarations: [

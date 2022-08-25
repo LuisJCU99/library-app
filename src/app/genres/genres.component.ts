@@ -24,7 +24,7 @@ export class GenresComponent implements OnInit {
     private service: GenreService,
     private route: ActivatedRoute,
     //private dataService: DataServices
-  ) {this.books = this._bookService.getBooks();}  books: any[];
+  ) { this.books = this._bookService.getBooks(); } books: any[];
 
   //aquí carga lo de la pag principal creo
   ngOnInit() {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {BookService} from './book.service';
+import { BookService } from './book.service';
 import { GenresComponent } from "../genres/genres.component";
 import { Genre } from '../genres/genre';
 import { Observable } from 'rxjs';
@@ -12,14 +12,14 @@ import { Observable } from 'rxjs';
 export class BookComponent {
   constructor(private _bookService: BookService) {
     this.books = this._bookService.getBooks();
-}  
+  }
 
-//genres$!: Observable<Genre[]>;
+  //genres$!: Observable<Genre[]>;
 
   books: any[];
   dropDownValue = "";
-      SetDropDownValue(drpValue : any) {
-        this.dropDownValue = drpValue.target.value;
-    }
- 
+  SetDropDownValue(drpValue: any) {
+    this.dropDownValue = drpValue.target.value;
+  }
+
 }
