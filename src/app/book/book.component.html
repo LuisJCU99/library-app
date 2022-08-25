@@ -1,36 +1,26 @@
-<h2>Select Country</h2>
-<select (change)="SetDropDownValue($event)">
-  <option value="">Select</option>
-  <option value="In">In</option>
-  <option value="US">US</option>
-  <option value="UK">UK</option>
-</select>
-<h2>You Have Selected</h2>
-<div [ngSwitch] = 'dropDownValue'>
-  <h3 *ngSwitchCase="'In'">India</h3>
-  <h3 *ngSwitchCase="'US'">United State</h3>
-  <h3 *ngSwitchCase="'UK'">United Kingdom</h3>
-  <h3 *ngSwitchDefault="">You have not selected any country</h3>
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+<div *ngFor='let book of books'>
+  <div id="comp-render">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img [src]="book.Image" >
+                <div class="card-body" style="overflow-y: scroll; height: 200px;">
+                  <p class="card-text"><b>{{book.Name}}</b>{{book.Description}}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>   
+            </div>
+          </div>
+        </div>
+  </div>
 </div>
-<table>
-  <thead>
-      <tr>
-          <th>ID</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Branch</th>
-          <th>DOB</th>
-          <th>Gender</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr *ngFor='let book of books'>
-          <td>{{book.ID_genre}}</td>
-          <td>{{book.Name}}</td>
-          <td>{{book.Description}}</td>
-          
-      </tr>
-  </tbody>
-</table>
 
 

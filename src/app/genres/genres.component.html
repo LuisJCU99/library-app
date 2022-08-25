@@ -2,9 +2,8 @@
 <div class="genres">
   <div *ngFor="let genre of genres$ | async" [class.selected]="genre.id === selectedId">
     <a (click)="onPress()" [routerLink]="['/genres', genre.id]">
-      <span class="badge">{{ genre.id }}</span> <h3>{{ genre.name }}</h3>
+      <span class="badge">{{ genre.id }}</span> <h3 class="text-center">{{ genre.name }}</h3>
     </a>
-  
     <div class="album py-5 bg-light">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
