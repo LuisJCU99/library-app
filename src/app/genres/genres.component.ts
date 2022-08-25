@@ -3,7 +3,6 @@ import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import { GenreService } from './genres.service';
 //import { DataServices } from 'src/app/data.services';
 import { GENRES } from './mock-genres';
