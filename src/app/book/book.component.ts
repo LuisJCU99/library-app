@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { BookService } from './book.service';
 
 @Component({
@@ -11,9 +11,4 @@ export class BookComponent {
     this.books = this._bookService.getBooks();
   }
   books: any[];
-  dropDownValue = "";
-  SetDropDownValue(drpValue: any) {
-    this.dropDownValue = drpValue.target.value;
-  }
-
 }
