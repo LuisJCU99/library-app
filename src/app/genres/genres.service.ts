@@ -15,7 +15,6 @@ export class GenreService {
   constructor(private messageService: MessageService) { }
 
   getGenres(): Observable<Genre[]> {
-    // TODO: send the message _after_ fetching the heroes
     this.messageService.add('HeroService: fetched heroes');
     return of(GENRES);
   }
