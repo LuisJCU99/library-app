@@ -1,14 +1,14 @@
 import { Genre } from './genre';
 
 export const GENRES: Genre[] = [
-  { id: 1, name: 'Fantasía' },
-  { id: 2, name: 'Aventuras' },
-  { id: 3, name: 'Ciencias' },
-  { id: 4, name: 'Cómics' },
+  { id: 1, name: 'Fantasy' },
+  { id: 2, name: 'Adventure' },
+  { id: 3, name: 'Science' },
+  { id: 4, name: 'Comics' },
   /* 
-    { id: 5, name: 'Misterio' },
+    { id: 5, name: 'Mistery' },
     { id: 6, name: 'Romance' },
-    { id: 7, name: 'Acción' },
-    { id: 8, name: 'Poesía' },
+    { id: 7, name: 'Action' },
+    { id: 8, name: 'Poetry' },
   */
 ];
